@@ -3,8 +3,10 @@ require([
       "esri/views/SceneView",
       "esri/Camera",
       "esri/widgets/Home",
-      "dojo/domReady!"
-    ], function(WebScene, SceneView, Camera, Home) {
+      "dojo/domReady!",
+      "esri/widgets/Legend",
+      "esri/widgets/LayerList"
+    ], function(WebScene, SceneView, Camera, Legend, LayerList, Home) {
 
     
       /*var map = new Map({
@@ -76,6 +78,28 @@ require([
             }
         },
     });
+      
+    view.when(function() {
+	
+          // get the first layer in the collection of operational layers in the WebMap
+          // when the resources in the MapView have loaded.
+        var featureLayer = scene.layers.getItemAt(1);
+
+        var legend = new Legend({
+          view: view,
+          layerInfos: [{
+            layer: featureLayer,
+            title: "Major project buildings"
+          }]
+        });
+          
+          var layerList = new LayerList({
+            view: view
+            });
+      
+   view.ui.add(legend, "bottom-right");
+   view.ui.add(layerList, "bottom-right");
+   });
     
     var homeBtn = new Home({
         view: view
