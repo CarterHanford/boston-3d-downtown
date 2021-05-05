@@ -85,13 +85,13 @@ require([
           // when the resources in the MapView have loaded.
         var featureLayer = scene.layers.getItemAt(1);
 
-        var legend = new Legend({
-          view: view,
-          layerInfos: [{
-            layer: featureLayer,
-            title: "Major project buildings"
-          }]
-        });
+        //var legend = new Legend({
+          //view: view,
+         // layerInfos: [{
+            //layer: featureLayer,
+            //title: "Major project buildings"
+          //}]
+        //});
           
           var layerList = new LayerList({
             view: view
