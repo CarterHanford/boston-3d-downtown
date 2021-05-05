@@ -93,12 +93,12 @@ require([
           //}]
         //});
           
-          var layerList = new LayerList({
-            view: view
-            });
+          //var layerList = new LayerList({
+            //view: view
+            //});
       
-   view.ui.add(legend, "bottom-right");
-   view.ui.add(layerList, "bottom-right");
+   //view.ui.add(legend, "bottom-right");
+   //view.ui.add(layerList, "bottom-right");
    });
     
     var homeBtn = new Home({
